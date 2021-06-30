@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border : 1px solid #111 ;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mycanvas" width="1500px" height="800px"></canvas>
+    <a>
+        <video src='../videos/Clousds.mp4' autoplay controls width="500px" height="500px">
+    </a>    
+    <button id="recorder_btn">다운로드</button>
+</video>
+</body>
+<script>
+    
+    // 버튼 작성해라
+</script>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>
+            How to Download files Using JavaScript
+      </title>
+</head>
+
+<body>
+
+      <!-- <textarea id="text">DelftStack</textarea> -->
+      <video id='text' src='../videos/Clousds.mp4' autoplay controls width="500px" height="500px"></video>
+      <br />
+      <input type="button" id="btn" value="Download" />
+      <a href="../videos/Clousds.mp4" download>Download</a>
+      <script>
+            function download(filename, textInput) {
+
+                  var element = document.createElement('video');
+                  element.setAttribute('href',"LINK HERE");
+                  element.setAttribute('download', filename);
+                  document.body.appendChild(element);
+                  element.click();
+                  //document.body.removeChild(element);
+            }
+            document.getElementById("btn")
+                  .addEventListener("click", function () {
+                        var text = document.getElementById("text").value;
+                        var filename = "output.mp4";
+                        download(filename, text);
+                  }, false);
+      </script>
+</body>
+
+</html>
